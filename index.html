@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horror Haven - Login</title>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <header>
+    <img src="assets/ROSNR.png" alt="Logo" class="icon"/>
+    <span>Ruby Organization for Supernatural Researches</span>
+  </header>
+
+
+  <div class="login-container fade-in">
+    <h2>Welcome to ROSNR Archive</h2>
+    <form  id="loginCheck">
+      <input type="text" id="Username" placeholder="Username" required />
+      <input type="password" id="password" placeholder="Password" required />
+      <button type="submit">Enter the Darkness</button>
+      <SCript>
+        document.getElementById("loginCheck").addEventListener("submit", function(e) {
+          e.preventDefault();
+
+          let user = document.getElementById("Username").value;
+          let pass = document.getElementById("password").value;
+
+          const ROSNRUsername = "admin";
+          const ROSNRPassword = "admin";
+
+          if (user == ROSNRUsername && pass == ROSNRPassword) {
+            window.location.href = "pages/select.html"
+          } else {
+            alert("unknown login attempt")
+          }
+        })
+
+      </SCript>
+    </form>
+  </div>
+</body>
+</html>
